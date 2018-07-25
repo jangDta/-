@@ -59,6 +59,23 @@
                                     <action selector="logout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="80Z-1w-f8P"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zoH-gO-Y3h" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="236" y="506" width="96" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="FACEBOOK">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goFacebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Xt-Xr-1f8"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="swift" translatesAutoresizingMaskIntoConstraints="NO" id="oRW-fr-9MB">
+                                <rect key="frame" x="129" y="96" width="130" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -66,7 +83,9 @@
                     <connections>
                         <outlet property="birthLabel" destination="bP7-O9-IuS" id="48D-gf-jqG"/>
                         <outlet property="emailLabel" destination="oYH-pv-Vqb" id="BES-vo-vjL"/>
+                        <outlet property="facebookBtn" destination="zoH-gO-Y3h" id="bmz-hA-3nZ"/>
                         <outlet property="nameLabel" destination="dm0-Yk-vQL" id="ykO-ih-cKa"/>
+                        <outlet property="profileImageView" destination="oRW-fr-9MB" id="CVW-TA-qbr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -74,4 +93,7 @@
             <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="swift" width="80" height="80"/>
+    </resources>
 </document>
