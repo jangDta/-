@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01A39D859E16E05376A6AD05 /* Pods_EasySign.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257E41DEAF62EB2E1D546819 /* Pods_EasySign.framework */; };
 		CC1153B221088833009D7BBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1153B121088833009D7BBC /* AppDelegate.swift */; };
 		CC1153B421088833009D7BBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1153B321088833009D7BBC /* ViewController.swift */; };
 		CC1153B721088833009D7BBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC1153B521088833009D7BBC /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		257E41DEAF62EB2E1D546819 /* Pods_EasySign.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasySign.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		58FB5A8AD60B791F10977FB4 /* Pods-EasySign.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasySign.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasySign/Pods-EasySign.release.xcconfig"; sourceTree = "<group>"; };
+		C552860CC18C68FEDC1A3E42 /* Pods-EasySign.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasySign.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasySign/Pods-EasySign.debug.xcconfig"; sourceTree = "<group>"; };
 		CC1153AE21088832009D7BBC /* EasySign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasySign.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC1153B121088833009D7BBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC1153B321088833009D7BBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01A39D859E16E05376A6AD05 /* Pods_EasySign.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B24F650CAB9088341A0F773 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C552860CC18C68FEDC1A3E42 /* Pods-EasySign.debug.xcconfig */,
+				58FB5A8AD60B791F10977FB4 /* Pods-EasySign.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		87332C603530F1102E37D7F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				257E41DEAF62EB2E1D546819 /* Pods_EasySign.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CC1153A521088832009D7BBC = {
 			isa = PBXGroup;
 			children = (
 				CC1153B021088832009D7BBC /* EasySign */,
 				CC1153AF21088832009D7BBC /* Products */,
+				2B24F650CAB9088341A0F773 /* Pods */,
+				87332C603530F1102E37D7F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC1153C021088834009D7BBC /* Build configuration list for PBXNativeTarget "EasySign" */;
 			buildPhases = (
+				75CCDDB5A0619305692C6C9A /* [CP] Check Pods Manifest.lock */,
 				CC1153AA21088832009D7BBC /* Sources */,
 				CC1153AB21088832009D7BBC /* Frameworks */,
 				CC1153AC21088832009D7BBC /* Resources */,
+				F8DBA9D0DD434B28C42CA892 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -96,11 +122,12 @@
 				TargetAttributes = {
 					CC1153AD21088832009D7BBC = {
 						CreatedOnToolsVersion = 9.4.1;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = CC1153A921088832009D7BBC /* Build configuration list for PBXProject "EasySign" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -129,6 +156,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		75CCDDB5A0619305692C6C9A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EasySign-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8DBA9D0DD434B28C42CA892 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EasySign/Pods-EasySign-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${PODS_ROOT}/naveridlogin-sdk-ios/NaverThirdPartyLogin.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NaverThirdPartyLogin.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasySign/Pods-EasySign-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CC1153AA21088832009D7BBC /* Sources */ = {
@@ -270,23 +338,21 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		CC1153C121088834009D7BBC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C552860CC18C68FEDC1A3E42 /* Pods-EasySign.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T5Y35W5FL6;
 				INFOPLIST_FILE = EasySign/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hi.com.EasySign;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -296,15 +362,14 @@
 		};
 		CC1153C221088834009D7BBC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58FB5A8AD60B791F10977FB4 /* Pods-EasySign.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T5Y35W5FL6;
 				INFOPLIST_FILE = EasySign/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hi.com.EasySign;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
